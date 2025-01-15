@@ -107,12 +107,9 @@ forge verify-contract \
   0x67329e4dc233512f06c16cF362EC3D44Cdc800e0 \
   src/Counter.sol:Counter
 ```
-
-```
 On successful verification of smart contract, you should get a similar output in your terminal:
 ```
 Start verifying contract `0x1355a4f7829161a4d27BDb8970D32b89ef89A1Be`
-
 Submitting verification for [src/Counter.sol:Counter] 0x1355a4f7829161a4d27BDb8970D32b89ef89A1Be.
 Submitted contract for verification:
     Response: `OK`
