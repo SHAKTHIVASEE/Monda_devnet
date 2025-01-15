@@ -96,10 +96,16 @@ Deployed to: 0x67329e4dc233512f06c16cF362EC3D44Cdc800e0
 Transaction hash: 0xa0a40c299170c9077d321a93ec20c71e91b8aff54dd9fa33f08d6b61f8953ee0
 ```
 
-### 10. Create a new Nexus project
+### 10. Verify a smart contract on Monad
+Use the below command to verify a smart contract by replacing contract address in the terminal.
 
-```shell
-cargo nexus new nexus-project
+```
+forge verify-contract \
+  --rpc-url https://explorer.monad-devnet.devnet101.com/api/eth-rpc \
+  --verifier blockscout \
+  --verifier-url 'https://explorer.monad-devnet.devnet101.com/api/' \
+  0x67329e4dc233512f06c16cF362EC3D44Cdc800e0 \
+  src/Counter.sol:Counter
 ```
 
 This will create a new Rust project directory with the following structure:
@@ -119,53 +125,15 @@ cd nexus-project
 cd src
 nano main.rs
 ```
-As an example, you can change the content of `./src/main.rs` to:
+On successful verification of smart contract, you should get a similar output in your terminal:
+```
+Start verifying contract `0x1355a4f7829161a4d27BDb8970D32b89ef89A1Be`
 
-```rust
-#![no_std]
-#![no_main]
-
-fn fib(n: u32) -> u32 {
-    match n {
-        0 => 0,
-        1 => 1,
-        _ => fib(n - 1) + fib(n - 2),
-    }
-}
-
-#[nexus_rt::main]
-fn main() {
-    let n = 7;
-    let result = fib(n);
-    assert_eq!(result, 13);
-}
+Submitting verification for [src/Counter.sol:Counter] 0x1355a4f7829161a4d27BDb8970D32b89ef89A1Be.
+Submitted contract for verification:
+    Response: `OK`
+    GUID: `1355a4f7829161a4d27bdb8970d32b89ef89a1be67448d78`
 ```
 
-
-### 12. Run your program
-
-```bash
-cargo nexus run
-```
-
-### 13. step-by-step execution trace on the NVM, run:
-
-```bash
-cargo nexus run -v
-```
-
-### 14. Prove your program - Generate a proof for your Rust program using the Nexus zkVM.
-
-```shell
-cargo nexus prove
-```
-
-### 15. Verify your proof - Finally, load and verify the proof:
-
-```shell
-cargo nexus verify
-```
-
-
-#### Most importanly  commit and push the repo in github 
+$$$$$$
 
