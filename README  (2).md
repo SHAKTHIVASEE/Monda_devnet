@@ -35,7 +35,8 @@ forge init --template monad-developers/foundry-monad zotac
 cd zotac
 ```
 
-### 6. Need to change foundry.toml file with following command
+### 6. Modify Foundry configuration
+Update foundry.toml file to add Monad configuration.
 
 ```
 [profile.default]
@@ -55,16 +56,30 @@ chain_id = 20143
 monadDevnet = { key = "DUMMY_VALUE", url = "https://explorer.monad-devnet.devnet101.com/", chain = 20143 }
 
 ```
-### 7. Input 1 and proceed 
+### 7. Write a smart contract
+You can write your smart contracts under the src folder. There is already a Counter contract in the project located at src/Counter.sol.
 
 ```
-. "$HOME/.cargo/env"
+// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.13;
+
+contract Counter {
+    uint256 public number;
+
+    function setNumber(uint256 newNumber) public {
+        number = newNumber;
+    }
+
+    function increment() public {
+        number++;
+    }
+}
 ```
 
-### 8. With the RISC-V target:
+### 8. Compile the smart contract
 
-```shell
-rustup target add riscv32i-unknown-none-elf
+```
+forge compile
 ```
 
 ### 9. Then install the Nexus zkVM:
