@@ -108,22 +108,6 @@ forge verify-contract \
   src/Counter.sol:Counter
 ```
 
-This will create a new Rust project directory with the following structure:
-
-```shell
-./nexus-project
-├── Cargo.lock
-├── Cargo.toml
-└── src
-    └── main.rs
-```
-
-### 11. Move to Directory, Replace the code and press CNTL+X, Y, Enter
-
-```
-cd nexus-project
-cd src
-nano main.rs
 ```
 On successful verification of smart contract, you should get a similar output in your terminal:
 ```
