@@ -8,39 +8,51 @@
 ```
 curl --proto '=https' --tlsv1.3 https://sh.rustup.rs -sSf | sh
 ```
-
 ```
 source $HOME/.cargo/env
-``
-
+```
 ```
 curl https://sh.rustup.rs -sSf | sh
-``
+```
 
 ```
 curl -L https://foundry.paradigm.xyz | bash
-``
+```
 
 ```
 source /home/gitpod/.bashrc
-``
+```
 
 ```
 foundryup
-``
-
-
-## 5. Install Build Essential 
-```
-sudo apt update
-sudo apt install build-essential
 ```
 
+## 5. Monad Template
+```
+forge init --template monad-developers/foundry-monad zotac
+```
+```
+cd zotac
+```
 
-### 6. Install Rust
+### 6. Need to change foundry.toml file with following command
 
 ```
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+
+# Monad Configuration
+
+eth-rpc-url = "https://rpc-devnet.monadinfra.com/rpc/3fe540e310bbb6ef0b9f16cd23073b0a"
+
+chain_id = 20143
+
+# Etherscan Configuration
+[etherscan]
+
+monadDevnet = { key = "DUMMY_VALUE", url = "https://explorer.monad-devnet.devnet101.com/", chain = 20143 }
 
 ```
 ### 7. Input 1 and proceed 
