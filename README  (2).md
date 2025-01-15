@@ -8,18 +8,23 @@
 ```
 curl --proto '=https' --tlsv1.3 https://sh.rustup.rs -sSf | sh
 ```
+
 ```
 source $HOME/.cargo/env
 ``
+
 ```
 curl https://sh.rustup.rs -sSf | sh
 ``
+
 ```
 curl -L https://foundry.paradigm.xyz | bash
 ``
+
 ```
 source /home/gitpod/.bashrc
 ``
+
 ```
 foundryup
 ``
