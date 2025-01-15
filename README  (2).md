@@ -1,17 +1,30 @@
-# The Nexus zkVM
+# Monad Dev net contract depolyment 
 
-The Nexus zkVM is a modular, extensible, open-source, and highly-parallelized zkVM, designed to run at *a trillion CPU cycles proved per second* given enough machine power.
-
-## 1. Fork this Repo 
+## 1. Fork this Repo & give star
 ## 2. Login with Gitpod.io
 
-## 3. Press CNTRL+C
-
-## 4. Install Cmake
+## 3. Install Dependency 
 
 ```
-sudo apt install cmake
+curl --proto '=https' --tlsv1.3 https://sh.rustup.rs -sSf | sh
 ```
+```
+source $HOME/.cargo/env
+``
+```
+curl https://sh.rustup.rs -sSf | sh
+``
+```
+curl -L https://foundry.paradigm.xyz | bash
+``
+```
+source /home/gitpod/.bashrc
+``
+```
+foundryup
+``
+
+
 ## 5. Install Build Essential 
 ```
 sudo apt update
