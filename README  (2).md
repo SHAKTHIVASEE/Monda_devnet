@@ -82,10 +82,18 @@ contract Counter {
 forge compile
 ```
 
-### 9. Then install the Nexus zkVM:
+### 9. Deploy the smart contract
+Use the below command to deploy a smart contract by directly pasting the private key in the terminal.
 
-```shell
-cargo install --git https://github.com/nexus-xyz/nexus-zkvm cargo-nexus --tag 'v0.2.0'
+```
+forge create --private-key <your_private_key> src/Counter.sol:Counter
+```
+On successful deployment of smart contract, the output should be similar to the following:
+
+```
+Deployer: 0xB1aB62fdFC104512F594fCa0EF6ddd93FcEAF67b
+Deployed to: 0x67329e4dc233512f06c16cF362EC3D44Cdc800e0
+Transaction hash: 0xa0a40c299170c9077d321a93ec20c71e91b8aff54dd9fa33f08d6b61f8953ee0
 ```
 
 ### 10. Create a new Nexus project
