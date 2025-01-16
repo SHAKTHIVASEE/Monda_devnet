@@ -57,7 +57,7 @@ monadDevnet = { key = "DUMMY_VALUE", url = "https://explorer.monad-devnet.devnet
 
 ```
 ### 7. Write a smart contract
-You can write your smart contracts under the src folder. There is already a Counter contract in the project located at src/Counter.sol.
+You can write your smart different contracts under the src folder. There is already a Counter contract in the project located at src/Counter.sol.
 
 ```
 // SPDX-License-Identifier: UNLICENSED
@@ -86,7 +86,8 @@ forge compile
 Use the below command to deploy a smart contract by directly pasting the private key in the terminal.
 
 ```
-forge create --private-key <your_private_key> src/Counter.sol:Counter
+forge create --private-key <your_private_key> src/Counter.sol:Counter --broadcast
+
 ```
 On successful deployment of smart contract, the output should be similar to the following:
 
