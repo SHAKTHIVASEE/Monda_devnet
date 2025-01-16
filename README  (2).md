@@ -117,5 +117,5 @@ Submitted contract for verification:
     GUID: `1355a4f7829161a4d27bdb8970d32b89ef89a1be67448d78`
 ```
 
-$$$$$$
+Now all done.. star the repo...
 
